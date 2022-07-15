@@ -1,0 +1,13 @@
+<h1>Listar usuários</h1>
+
+{{#each Usuario}}
+    ID: {{id}}<br>
+    Nome: {{nome}}<br>
+    Email: {{email}}<br>
+    Senha: {{senha}}<br>
+    Criado em: {{#formatDate createdAt}}{{/formatDate}}<br>
+    Atualizado em: {{#formatDate updatedAt}}{{/formatDate}}<br>
+    <a href="/del-usuario/{{id}}"><button>Apagar</button></a> <br>
+    <a href="/edit-usuario/{{id}}"><button>Editar</button></a>
+    <hr>
+{{/each}}
